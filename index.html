@@ -1,0 +1,57 @@
+<!DOCTYPE  html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id = main>
+        <img  alt=""> <br>
+        <button onclick="myPicture()">Click on it to see more pictures</button>
+    </div>
+    
+
+    <script>
+    let about = document.createElement('p')
+    about.innerHTML="Hi! My name is Mofejesu Famuyiwa, and I am a Computer Science student from the College of Computing and Communication studies at Bowen University Iwo, Osun state. I was born and raised in Osogbo, Osun state. I hail from Ijebu-jesha, Osun state. I have 3 siblings, 1 boy and 2 girls. I'm a UI designer and I'm still learning UI/UX. I'm also on a journey to become a Front-end developer. I'm a great lover of perfumes and I love to smell really nice. I run an online fragrance business, my brand name is <b>NICIE FRAGRANCE</b>. I also have a thing for lipgloss and I'm planning to start my own lipgloss brand very soon. I can be an introvert and an extrovert because I have both characteristics. My favorite food is white rice and stew. I like all colors but my favorite is black. I love to watch movies at my leisure time. I love to go sightseeing. I know a lot of people but I only have few close friends in my corner. I love my space and most times I love being alone. I also like to hangout with cool people. I enjoy cooking and I love to try new recipes of food. I also make different recipes of smoothies and other healthy drinks, my brand name is <b>The-foodcity</b>. I'm a self-motivated person and I love to try out new things. I'm a Christian and I believe in God. I am a dependable person who is great at time management. I am extremely driven , with a clear goal to succeed. I'm a natural leader and also a very good team member. I have a Certificate of Participation from American Chemical Society. I love to give to people. Lastly, I love pet dogs and my favorite is Lhasa Apso because they can be very playful but calm and deliberate at the same time. ";
+    let aboutme = document.body;
+    aboutme.appendChild(about);
+ 
+   
+   
+    let heading = document.createElement('h2')
+    heading.innerHTML="About Me";
+    let titleHeading = document.body;
+    titleHeading.appendChild(heading)
+    titleHeading.insertBefore(heading, about);
+
+
+    function myPicture(){
+        let randNUms = Math.floor(Math.random() * 4)
+        if(randNUms ==0){
+            randNUms =1;
+        }
+    let img = document.querySelector('img');
+    
+   let myPicture=  img.getAttribute('src');
+   if(myPicture){
+    img.removeAttribute('src');
+   }else{
+    img.setAttribute('src', 'images/' +randNUms+ '.jpg');
+   }
+}
+
+    let img = document.querySelector('img');
+    img.alt="My picture";
+    img.src= "images/1.jpg"
+
+
+
+    </script>
+    
+</body>
+</html>
